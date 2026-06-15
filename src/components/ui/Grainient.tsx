@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 
 interface GrainientProps {
@@ -153,20 +153,28 @@ const Grainient: React.FC<GrainientProps> = ({
   className = '',
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [webglFailed, setWebglFailed] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({
-      webgl: 2,
-      alpha: true,
-      antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2),
-    });
+    let renderer: InstanceType<typeof Renderer>;
+    let canvas: HTMLCanvasElement;
+    try {
+      renderer = new Renderer({
+        webgl: 2,
+        alpha: true,
+        antialias: false,
+        dpr: Math.min(window.devicePixelRatio || 1, 2),
+      });
+      canvas = renderer.gl.canvas as HTMLCanvasElement;
+    } catch {
+      setWebglFailed(true);
+      return;
+    }
 
     const gl = renderer.gl;
-    const canvas = gl.canvas as HTMLCanvasElement;
     canvas.style.width = '100%';
     canvas.style.height = '100%';
     canvas.style.display = 'block';
@@ -297,6 +305,15 @@ const Grainient: React.FC<GrainientProps> = ({
     grainAmount, grainScale, grainAnimated, contrast, gamma, saturation,
     centerX, centerY, zoom, color1, color2, color3,
   ]);
+
+  if (webglFailed) {
+    return (
+      <div
+        className={`relative h-full w-full overflow-hidden ${className}`.trim()}
+        style={{ background: `linear-gradient(135deg, ${color1}, ${color2}, ${color3})` }}
+      />
+    );
+  }
 
   return <div ref={containerRef} className={`relative h-full w-full overflow-hidden ${className}`.trim()} />;
 };
