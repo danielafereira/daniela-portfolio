@@ -31,6 +31,8 @@ function GalleryImage({
       <img
         src={image.src}
         alt={image.title ?? ""}
+        loading="lazy"
+        decoding="async"
         className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.03]"
       />
       <div className="absolute inset-0 rounded-[15px] bg-ink/0 group-hover:bg-ink/20 transition-colors duration-300" />

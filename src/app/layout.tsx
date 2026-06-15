@@ -43,6 +43,11 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable}`}
     >
+      <head>
+        <link rel="preconnect" href="https://www.youtube.com" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+      </head>
       <body className="bg-cream text-ink font-sans antialiased">
         <LenisProvider>{children}</LenisProvider>
       </body>

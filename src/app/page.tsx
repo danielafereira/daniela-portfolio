@@ -45,6 +45,8 @@ export default function Home() {
             <img
               src="/images/hero-bg.png.png"
               alt=""
+              fetchPriority="high"
+              decoding="sync"
               className="w-full h-full object-cover md:h-auto md:object-fill block"
             />
             {/* Glow canvas — sits between bg and Daniela */}
@@ -53,6 +55,8 @@ export default function Home() {
             <img
               src="/images/hero-fg.png.png"
               alt="Daniela Fereira"
+              fetchPriority="high"
+              decoding="sync"
               className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
           </div>
@@ -205,6 +209,8 @@ export default function Home() {
                       <img
                         src={`/images/cases/${c.slug}/${c.cover}`}
                         alt={c.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-[14.4rem] md:h-[18rem] object-cover object-top rounded-[15px] mb-5 cursor-pointer"
                       />
                     </Link>
