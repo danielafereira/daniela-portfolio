@@ -57,7 +57,7 @@ export const projects: Project[] = [
     area: "Café & Bar",
     description: "Verdeen is a modern café and bar in Brazil, with one specific creative condition: it was already open. The interior design existed, the space had a personality — the new brand had to grow around it, not replace it. This shaped every decision, from the organic forms to the nature-inspired color palette chosen to coexist with the existing environment rather than compete with it.\n\nThe brand's character — inspired by a bread crumb one of the owners found while washing dishes — was brought to life through illustration, developed with hand-drawing techniques that gave it warmth and personality. The logotype itself has manual intervention: individual letters were edited freehand to fit together more naturally, giving the wordmark an organic, slightly imperfect quality that feels intentional and alive.",
     cover: "cover.jpg",
-    images: ["01.jpg", "02.jpg", "03.gif", "04.jpg", "05.jpg", "06.jpg", "07.jpg"],
+    images: ["01.jpg", "02.jpg", "Verdeen_3.mp4", "04.jpg", "05.jpg", "06.jpg", "07.jpg"],
   },
   {
     slug: "burnitdown",
