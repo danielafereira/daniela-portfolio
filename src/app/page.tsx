@@ -39,6 +39,28 @@ export default function Home() {
         {/* ══ HERO ══════════════════════════════════════════════════════════ */}
         <section id="hero" className="md:min-h-screen bg-cream flex flex-col pt-16">
 
+          {/* Photo banner — full composition from Figma */}
+          <div className="mx-4 sm:mx-8 md:mx-12 rounded-2xl overflow-hidden shrink-0 relative h-[80vw] sm:h-[65vw] md:h-auto">
+            {/* Background layer — the bar/room photo */}
+            <img
+              src="/images/hero-bg.png.png"
+              alt=""
+              fetchPriority="high"
+              decoding="sync"
+              className="w-full h-full object-cover md:h-auto md:object-fill block"
+            />
+            {/* Glow canvas — sits between bg and Daniela */}
+            <CursorDitherTrail trailColor="#FFFBAF" dotSize={4} fadeDuration={300} />
+            {/* Foreground layer — Daniela cutout on transparent background */}
+            <img
+              src="/images/hero-fg.png.png"
+              alt="Daniela Fereira"
+              fetchPriority="high"
+              decoding="sync"
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            />
+          </div>
+
           {/* Typography block */}
           <div className="flex-1 flex flex-col items-center justify-start md:justify-center px-6 md:px-12 pt-10 pb-4 md:py-8 text-center">
 
