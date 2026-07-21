@@ -91,8 +91,8 @@ export default function Home() {
               className="font-heading font-extrabold text-ink uppercase leading-snug"
               style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)" }}
             >
-              <p>Graphic Design, Motion Graphics,</p>
-              <p>Creative Direction, Etc. Etc.</p>
+              <p>Graphic Design, Motion Graphics</p>
+              <p>and Creative Direction</p>
             </div>
 
           </div>

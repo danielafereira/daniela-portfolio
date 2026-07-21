@@ -44,8 +44,8 @@ const experiences = [
   },
   {
     role: "Graphic and Motion Designer",
-    company: "Freelancer (Pre-degree)",
-    period: "Jul 2017 — May 2020",
+    company: "Freelancer (Intermittent)",
+    period: "Apr 2020 — Oct 2025",
     location: "Venezuela & Spain (Remote)",
     description:
       "Led branding, visual concept development, and motion design for a diverse roster of clients, adapting and creating across industries while maintaining a consistent standard of craft. Produced editorial pieces, campaign visuals, illustration-driven content, and motion assets that translate each client's personality into cohesive visual storytelling. Known for creative expressiveness and the ability to turn abstract ideas into polished, audience-ready content.",
